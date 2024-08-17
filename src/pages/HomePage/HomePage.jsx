@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import MovieList from "../../components/MovieList/MovieList";
-import api from "../services/api"; // сервіс для роботи з API
+import api from "../../services/api";
+import styles from "./HomePage.module.css";
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -11,8 +11,8 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Trending Movies</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Trending Movies</h1>
       <MovieList movies={movies} />
     </div>
   );

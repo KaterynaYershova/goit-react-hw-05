@@ -1,20 +1,18 @@
 .list {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .item {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .link {
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  transition: color 0.3s;
+  color: #1e88e5;
+  font-size: 18px;
 }
 
 .link:hover {
-  color: #ff6347;
+  text-decoration: underline;
 }
