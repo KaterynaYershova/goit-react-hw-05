@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_KEY =
-  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NDA4YTdlNjBkNjJiYzllYTlkMWY2ZTVkMmNmZTExNiIsIm5iZiI6MTcyMzg5MDY2Ny44Mzk5NCwic3ViIjoiNjZjMDdhODc2NTRjNWZmNmQ1MWY1M2MyIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.hIFwcJAErlE1M6OuctzPIyZSO-CMm6MysYcxFXEYFcc";
+  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NDA4YTdlNjBkNjJiYzllYTlkMWY2ZTVkMmNmZTExNiIsIm5iZiI6MTcyMzk4OTk1My4wNTU2NTQsInN1YiI6IjY2YzA3YTg3NjU0YzVmZjZkNTFmNTNjMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.FLWAt38m6w9X-It3rncUp9M1Ik8sg1wSD_kDgverJls";
 const BASE_URL = "https://api.themoviedb.org/3";
 
 axios.defaults.baseURL = BASE_URL;
@@ -24,8 +24,20 @@ const getMovieDetails = async (movieId) => {
   return response.data;
 };
 
+const getMovieCast = async (movieId) => {
+  const response = await axios.get(`/movie/${movieId}/credits`);
+  return response.data;
+};
+
+const getMovieReviews = async (movieId) => {
+  const response = await axios.get(`/movie/${movieId}/reviews`);
+  return response.data;
+};
+
 export default {
   getTrendingMovies,
   searchMovies,
   getMovieDetails,
+  getMovieCast,
+  getMovieReviews,
 };

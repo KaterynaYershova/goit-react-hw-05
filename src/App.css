@@ -1,28 +1,30 @@
-nav {
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
   display: flex;
-  justify-content: start;
-  gap: 20px;
-  padding: 20px;
-  background-color: #f8f8f8;
-  box-shadow: 0 4px 2px -2px gray;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-button {
+  color: white;
+  margin: 0 15px;
   text-decoration: none;
   font-size: 18px;
-  color: #000;
-  padding: 10px 20px;
-  background-color: #e0e0e0;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.nav-button:hover {
-  background-color: #d6d6d6;
 }
 
 .nav-button.active {
-  background-color: #e91e63;
-  color: white;
   font-weight: bold;
+}
+
+.nav-button:hover {
+  color: #ddd;
+}
+
+.container {
+  padding-top: 60px;
 }

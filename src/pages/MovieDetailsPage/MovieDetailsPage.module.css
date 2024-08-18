@@ -1,0 +1,59 @@
+.movieDetails {
+  padding: 20px;
+}
+
+.goBackButton {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #007bff;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.movieInfo {
+  display: flex;
+  gap: 20px;
+}
+
+.movieImage {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.movieText {
+  max-width: 600px;
+}
+
+.movieText h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.movieText p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.additionalInfo {
+  margin-top: 20px;
+}
+
+.additionalInfo h3 {
+  margin-bottom: 10px;
+}
+
+.toggleButton {
+  margin-right: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.toggleButton:hover {
+  background-color: #0056b3;
+}
