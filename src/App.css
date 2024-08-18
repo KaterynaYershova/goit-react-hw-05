@@ -1,30 +1,30 @@
 .navbar {
-  background-color: #333;
-  color: white;
-  padding: 10px;
+  background-color: #282c34;
+  padding: 20px;
   display: flex;
   justify-content: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+  width: 100vw;
+  gap: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-button {
-  color: white;
-  margin: 0 15px;
+  color: #61dafb;
   text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
   font-size: 18px;
 }
 
-.nav-button.active {
-  font-weight: bold;
-}
-
 .nav-button:hover {
-  color: #ddd;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #61dafb;
 }
 
-.container {
-  padding-top: 60px;
+.nav-button.active {
+  background-color: #61dafb;
+  color: #282c34;
 }
