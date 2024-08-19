@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import api from "../../services/api";
 import MovieCast from "../../components/MovieCast/MovieCast";
 import MovieReviews from "../../components/MovieReviews/MovieReviews";
@@ -10,13 +10,15 @@ const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
   const [activeTab, setActiveTab] = useState(""); // track which section is active
   const navigate = useNavigate();
+  const location = useLocation();
+  const locationRef = useRef(location.state?.from || "/movies");
 
   useEffect(() => {
     api.getMovieDetails(movieId).then(setMovie).catch(console.error);
   }, [movieId]);
 
   const handleGoBack = () => {
-    navigate(-1);
+    navigate(locationRef.current);
   };
 
   return (

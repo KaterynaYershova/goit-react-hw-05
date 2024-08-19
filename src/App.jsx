@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
-import { NavLink, Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
+import Navigation from "./components/Navigation/Navigation";
 import "./App.css";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
@@ -16,24 +17,7 @@ const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 function App() {
   return (
     <div>
-      <nav className="navbar">
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? "nav-button active" : "nav-button"
-          }
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="/movies"
-          className={({ isActive }) =>
-            isActive ? "nav-button active" : "nav-button"
-          }
-        >
-          Movies
-        </NavLink>
-      </nav>
+      <Navigation />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
